@@ -7,7 +7,8 @@ const mongoose = require('mongoose')
 const postsRoutes = require('./routes/posts')
 const userRoutes = require('./routes/user')
 
-mongoose.connect('mongodb+srv://nenad:' + process.env.MONGO_ATLAS_PW + '@mean-stack-je3cd.mongodb.net/mean-stack?retryWrites=true', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/mean-stack', {useNewUrlParser: true})
+// mongoose.connect('mongodb+srv://nenad:' + process.env.MONGO_ATLAS_PW + '@mean-stack-je3cd.mongodb.net/mean-stack?retryWrites=true', { useNewUrlParser: true })
   .then(() => {
     console.log('Connected to database!')
   })
